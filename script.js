@@ -1,3 +1,8 @@
+const display = document.querySelector('#display');
+const clear = document.querySelector('#clear');
+const equals = document.querySelector('#equals');
+
+
 function add(num1, num2) {
     return num1 + num2;
 }
