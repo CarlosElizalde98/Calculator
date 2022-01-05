@@ -60,13 +60,22 @@ function evaluate() {
         return;
     }
 
+    if (currentOperator === '/' && currentDisplay.textContent === '0') {
+        alert("You cannot divide by Zero!");
+        return;
+    }
+
     secondNum = currentDisplay.textContent;
-    currentDisplay.textContent = operator(currentOperator, firstNum, secondNum);
+    currentDisplay.textContent = roundNum(operator(currentOperator, firstNum, secondNum));
     currentOperator = null;
 
 }
 
 //Basic operations for calculator
+function roundNum(number) {
+    return (Math.round(number * 1000) / 1000);
+}
+
 function add(num1, num2) {
     return num1 + num2;
 }
