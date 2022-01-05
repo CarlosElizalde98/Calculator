@@ -3,7 +3,6 @@ const clearBtn = document.querySelector('#clear');
 const equalsBtn = document.querySelector('#equals');
 const numButtons = document.querySelectorAll('.num-button');
 const opButtons = document.querySelectorAll('.operator');
-const operationDisplay = document.querySelector('#lastDisplay');
 
 let firstNum = '';
 let secondNum = '';
@@ -33,7 +32,6 @@ function displayNumber(number) {
 //Clears screen when clicked
 function clear() {
     currentDisplay.textContent = '0';
-    lastDisplay.textContent = '';
     firstNum = '';
     secondNum = '';
     currentOperator = null;
